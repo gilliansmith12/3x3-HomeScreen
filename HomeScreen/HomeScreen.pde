@@ -5,6 +5,10 @@ color black=#000000, white=#FFFFFF;
 float circleDiameter, rectWidth, rectHeight;
 float ptX1, ptX2, ptX3, ptX4, ptX5, ptX6, ptX7, ptX8, ptX9, ptX10, ptX11, ptX12, ptX13, ptX14, ptX15, ptX16;
 float ptY1, ptY2, ptY3, ptY4, ptY5, ptY6, ptY7, ptY8, ptY9, ptY10, ptY11, ptY12, ptY13, ptY14, ptY15, ptY16;
+float buttonX, buttonWidth, buttonHeight;
+float buttonY1, buttonY2, buttonY3;
+float textX, textWidth, textHeight;
+float textY1, textY2, textY3;
 
 void setup() {
   //Geometry
@@ -27,6 +31,19 @@ void setup() {
   //
   circleDiameter = displayWidth*1/35;
   //
+  buttonWidth = displayWidth*3/12;
+  buttonHeight = displayHeight*1/12;
+  buttonX = displayWidth*9/24;
+  buttonY1 = displayHeight*17/48;
+  buttonY2 = displayHeight*22/48;
+  buttonY3 = displayHeight*27/48;
+  //
+  textWidth = buttonWidth;
+  textHeight = buttonHeight;
+  textX = buttonX;
+  textY1 = buttonY1;
+  textY2 = buttonY2;
+  textY3 = buttonY3;
   } //End setup
 
 void draw() {
@@ -75,11 +92,22 @@ void draw() {
   fill(black);
   ellipse(ptX16, ptY16, circleDiameter, circleDiameter);
   fill(white);
+  //
+  rect(buttonX, buttonY1, buttonWidth, buttonHeight);
+  rect(buttonX, buttonY2, buttonWidth, buttonHeight);
+  rect(buttonX, buttonY3, buttonWidth, buttonHeight);
+  //
+  fill(black);
+  textAlign(CENTER, CENTER);
+  text(textX, textY1, textWidth, textHeight);
+  text(textX, textY2, textWidth, textHeight);
+  text(textX, textY3, textWidth, textHeight);
+  fill(white);
 
   } //End draw
 
 void mousePressed() {
-
+  if ( mouseX >= buttonX  && mouseY >= buttonY3 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY3+buttonHeight ) exit();
   } //End mousePressed
 
 void keyPressed() {
