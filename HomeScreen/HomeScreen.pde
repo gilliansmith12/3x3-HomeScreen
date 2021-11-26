@@ -38,12 +38,10 @@ void setup() {
   buttonY2 = displayHeight*22/48;
   buttonY3 = displayHeight*27/48;
   //
-  textWidth = buttonWidth;
-  textHeight = buttonHeight;
-  textX = buttonX;
-  textY1 = buttonY1;
-  textY2 = buttonY2;
-  textY3 = buttonY3;
+  textX = buttonX + buttonWidth/2;
+  textY1 = buttonY1 + buttonHeight/2;
+  textY2 = buttonY2 + buttonHeight/2;
+  textY3 = buttonY3 + buttonHeight/2;
   } //End setup
 
 void draw() {
@@ -98,10 +96,11 @@ void draw() {
   rect(buttonX, buttonY3, buttonWidth, buttonHeight);
   //
   fill(black);
+  textFont(createFont("Calibri", 80));
   textAlign(CENTER, CENTER);
-  text(textX, textY1, textWidth, textHeight);
-  text(textX, textY2, textWidth, textHeight);
-  text(textX, textY3, textWidth, textHeight);
+  text("PLAY", textX, textY1);
+  text("RESTART", textX, textY2);
+  text("EXIT", textX, textY3);
   fill(white);
 
   } //End draw
