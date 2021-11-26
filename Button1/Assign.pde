@@ -1,4 +1,4 @@
-void population() {
+void assign() {
   buttonX1 = displayWidth*3/5;
   buttonY1 = displayHeight*2/5;
   buttonX2 = displayWidth*1/5;
