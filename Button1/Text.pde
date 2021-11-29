@@ -1,22 +1,33 @@
-String buttonText1 = "Click Me!";
-String buttonText2 = "Or Me!";
+String buttonText1 = "Or Me!";
+String buttonText2 = "Click Me!";
 PFont buttonFont;
-color purple = #2C08FF; //Not nice for Night Mode
-color white = #FFFFFF;
+color purple = #2C08FF, white = #FFFFFF, black = #000000;
 //
-println("Start of Console");
-//
-String[] fontList = PFont.list(); //To list all fonts available on system
-printArray(fontList); //For listing all possible fonts to choose, then createFont
-buttonFont = createFont ("Harrington", 55); //Verify font exists
-//Tools / Create Font / Find Font / Do Not Press "OK", known bug
-//
-//Laying out text space and tyopgraphical Features
-fill(purple); //Ink, hexidecimal copied from Color Selector
-textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
-//Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-textFont(buttonFont, 50); //Change the number until it fits, largest font size
-//textFont() has option to combine font declaration with textSize()
-text(button, buttonX, buttonY, buttonWidth, buttonHeight);
-fill(white); //reset
-//Space for more rectangles below, with reset values
+void textSetup() {
+  // println("Start of Console");
+  // String[] fontList = PFont.list();
+  // printArray(fontList);
+  buttonFont = createFont ("Jomolhari", 55);
+} //End textSetup
+
+void textDrawPre() {
+  fill(black);
+  textAlign (CENTER, CENTER);
+  textFont(buttonFont, 100);
+} //End textDrawPre
+
+void textDraw1() {
+  textDrawPre();
+  text(buttonText1, buttonX1, buttonY1, buttonWidth, buttonHeight);
+  textDrawPost();
+} //End textDraw1
+
+void textDraw2() {
+  textDrawPre();
+  text(buttonText2, buttonX2, buttonY2, buttonWidth, buttonHeight);
+  textDrawPost();
+} //End textDraw2
+
+void textDrawPost() {
+    fill(white);
+} //End textDrawPost
