@@ -1,5 +1,5 @@
-String buttonText1 = "Or Me!";
-String buttonText2 = "Click Me!";
+String buttonText1 = "Click Me!";
+String buttonText2 = "Or Me!";
 PFont buttonFont;
 color orange = #C17025, white = #FFFFFF, black = #000000;
 //

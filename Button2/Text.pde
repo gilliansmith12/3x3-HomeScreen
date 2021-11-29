@@ -1,5 +1,6 @@
 
 String buttonText1 = "Click Me!";
+String buttonText2 = "Exit!";
 PFont buttonFont;
 color red = #930000, white = #FFFFFF, black = #000000;
 //
@@ -19,6 +20,12 @@ void textDrawPre() {
 void textDraw1() {
   textDrawPre();
   text(buttonText1, buttonX1, buttonY1, buttonWidth, buttonHeight);
+  textDrawPost();
+} //End textDraw1
+
+void textDraw2() {
+  textDrawPre();
+  text(buttonText2, buttonX2, buttonY2, buttonWidth, buttonHeight);
   textDrawPost();
 } //End textDraw2
 
