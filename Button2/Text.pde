@@ -1,7 +1,7 @@
-String buttonText1 = "Or Me!";
-String buttonText2 = "Click Me!";
+
+String buttonText1 = "Click Me!";
 PFont buttonFont;
-color orange = #C17025, white = #FFFFFF, black = #000000;
+color red = #930000, white = #FFFFFF, black = #000000;
 //
 void textSetup() {
   // println("Start of Console");
@@ -19,12 +19,6 @@ void textDrawPre() {
 void textDraw1() {
   textDrawPre();
   text(buttonText1, buttonX1, buttonY1, buttonWidth, buttonHeight);
-  textDrawPost();
-} //End textDraw1
-
-void textDraw2() {
-  textDrawPre();
-  text(buttonText2, buttonX2, buttonY2, buttonWidth, buttonHeight);
   textDrawPost();
 } //End textDraw2
 
