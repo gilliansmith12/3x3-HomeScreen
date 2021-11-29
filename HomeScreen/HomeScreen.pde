@@ -15,8 +15,7 @@ void setup() {
   //
   fullScreen();
   //
-  //Population
-
+  //population();
   //
   ptX1 = ptX4 = ptX7 = ptX10 = displayWidth*0;
   ptX2 = ptX5 = ptX8 = ptX11 = displayWidth*1/3;
