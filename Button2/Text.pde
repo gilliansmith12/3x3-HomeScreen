@@ -8,13 +8,13 @@ void textSetup() {
   // println("Start of Console");
   // String[] fontList = PFont.list();
   // printArray(fontList);
-  buttonFont = createFont ("Jomolhari", 55);
+  buttonFont = createFont ("Jomolhari", 90);
 } //End textSetup
 
 void textDrawPre() {
   fill(black);
   textAlign (CENTER, CENTER);
-  textFont(buttonFont, 100);
+  textFont(buttonFont);
 } //End textDrawPre
 
 void textDraw1() {

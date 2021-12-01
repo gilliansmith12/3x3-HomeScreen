@@ -9,7 +9,7 @@ Boolean rect = false, circle = false;
 void setup() {
   //Geometry
   fullScreen(); //size(width, height);
-  population();
+  assign();
   textSetup();
   } //End Setup()
 
