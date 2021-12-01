@@ -9,15 +9,12 @@ float buttonX, buttonWidth, buttonHeight;
 float buttonY1, buttonY2, buttonY3;
 float textX, textWidth, textHeight;
 float textY1, textY2, textY3;
+PImage tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8;
 
 void setup() {
   //Geometry
   fullScreen();
   assign();
-  //
-  } //End setup
-
-void draw() {
   //
   fill(white);
   rect(ptX1, ptY1, rectWidth, rectHeight);
@@ -68,6 +65,10 @@ void draw() {
   rect(buttonX, buttonY2, buttonWidth, buttonHeight);
   rect(buttonX, buttonY3, buttonWidth, buttonHeight);
   //
+  } //End setup
+
+void draw() {
+  //
   fill(black);
   textFont(createFont("Calibri", 80));
   textAlign(CENTER, CENTER);
@@ -75,11 +76,15 @@ void draw() {
   text("RESTART", textX, textY2);
   text("EXIT", textX, textY3);
   fill(white);
-
+  //
   } //End draw
 
 void mousePressed() {
   if ( mouseX >= buttonX  && mouseY >= buttonY3 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY3+buttonHeight ) exit();
+  //
+  if ( mouseX >= buttonX  && mouseY >= buttonY1 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY1+buttonHeight ) image(tile1, ptX6, ptY6, rectWidth, rectHeight);
+  //
+  if ( mouseX >= ptX6  && mouseY >= ptY6 && mouseX <= ptX6+rectWidth && mouseY <= ptY6+rectWidth ) image(tile2, ptX9, ptY9, rectWidth, rectHeight);
   } //End mousePressed
 
 void keyPressed() {
