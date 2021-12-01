@@ -1,7 +1,8 @@
+
 String buttonText1 = "Click Me!";
-String buttonText2 = "Or Me!";
+String buttonText2 = "Exit!";
 PFont buttonFont;
-color orange = #C17025, white = #FFFFFF, black = #000000;
+color red = #930000, white = #FFFFFF, black = #000000;
 //
 void textSetup() {
   // println("Start of Console");
