@@ -9,7 +9,8 @@ float buttonX, buttonWidth, buttonHeight;
 float buttonY1, buttonY2, buttonY3;
 float textX, textWidth, textHeight;
 float textY1, textY2, textY3;
-PImage tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8;
+PImage tile1, tile2, tile3a, tile3b, tile4, tile5, tile6, tile7, tile8;
+Boolean image3a, image3b;
 
 void setup() {
   //Geometry
@@ -77,6 +78,8 @@ void draw() {
   text("EXIT", textX, textY3);
   fill(white);
   //
+  if ( image3a == true ) image(tile3a, ptX8, ptY8, rectWidth, rectHeight);
+  //
   } //End draw
 
 void mousePressed() {
@@ -84,7 +87,13 @@ void mousePressed() {
   //
   if ( mouseX >= buttonX  && mouseY >= buttonY1 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY1+buttonHeight ) image(tile1, ptX6, ptY6, rectWidth, rectHeight);
   //
-  if ( mouseX > ptX6  && mouseY > ptY6 && mouseX < ptX6+rectWidth && mouseY < ptY6+rectWidth ) image(tile2, ptX9, ptY9, rectWidth, rectHeight);
+  if ( mouseX >= ptX6  && mouseY >= ptY6 && mouseX <= ptX6+rectWidth && mouseY <= ptY6+rectWidth ) image(tile2, ptX9, ptY9, rectWidth, rectHeight);
+  //
+  if ( mouseX >= ptX9  && mouseY >= ptY9 && mouseX <= ptX9+rectWidth && mouseY <= ptY9+rectWidth ) image(tile3a, ptX8, ptY8, rectWidth, rectHeight);
+  //
+  if (image3a == true) {
+    if ( mouseX >= ptX8  && mouseY >= ptY8 && mouseX <= ptX8+rectWidth && mouseY <= ptY8+rectWidth ) image(tile3b, ptX8, ptY8, rectWidth, rectHeight);
+  }
   } //End mousePressed
 
 void keyPressed() {
