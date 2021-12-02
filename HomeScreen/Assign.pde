@@ -26,11 +26,11 @@ void assign() {
   textY3 = buttonY3 + buttonHeight/2;
   //
   tile1 = loadImage("Tile 1.png");
-  tile2 = loadImage("Tile 2.png");
-  tile3 = loadImage("Tile 3.png");
-  tile4 = loadImage("TIle 4.png");
-  tile5 = loadImage("Tile 5.png");
-  tile6 = loadImage("Tile 6.png");
-  tile7 = loadImage("Tile 7.png");
-  tile8 = loadImage("Tile 8.png");
+  tile2 = loadImage("Tile 2 .png");
+  // tile3 = loadImage("Tile 3.png");
+  // tile4 = loadImage("TIle 4.png");
+  // tile5 = loadImage("Tile 5.png");
+  // tile6 = loadImage("Tile 6.png");
+  // tile7 = loadImage("Tile 7.png");
+  // tile8 = loadImage("Tile 8.png");
 }

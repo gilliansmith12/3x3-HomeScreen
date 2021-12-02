@@ -84,7 +84,7 @@ void mousePressed() {
   //
   if ( mouseX >= buttonX  && mouseY >= buttonY1 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY1+buttonHeight ) image(tile1, ptX6, ptY6, rectWidth, rectHeight);
   //
-  if ( mouseX >= ptX6  && mouseY >= ptY6 && mouseX <= ptX6+rectWidth && mouseY <= ptY6+rectWidth ) image(tile2, ptX9, ptY9, rectWidth, rectHeight);
+  if ( mouseX > ptX6  && mouseY > ptY6 && mouseX < ptX6+rectWidth && mouseY < ptY6+rectWidth ) image(tile2, ptX9, ptY9, rectWidth, rectHeight);
   } //End mousePressed
 
 void keyPressed() {
