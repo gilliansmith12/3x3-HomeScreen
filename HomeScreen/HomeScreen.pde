@@ -10,7 +10,7 @@ float buttonY1, buttonY2, buttonY3;
 float textX, textWidth, textHeight;
 float textY1, textY2, textY3;
 PImage tile1, tile2, tile3a, tile3b, tile4, tile5, tile6, tile7, tile8;
-Boolean image3a, image3b;
+Boolean image1 = false, image2 = false, image3a = false, image3b = false, image4 = false, image5 = false, image6 = false, image7 = false, text8 = false;
 
 void setup() {
   //Geometry
@@ -71,30 +71,72 @@ void setup() {
 void draw() {
   //
   fill(black);
-  textFont(createFont("Calibri", 80));
+  textFont(createFont("Jomolhari", 80));
   textAlign(CENTER, CENTER);
   text("PLAY", textX, textY1);
   text("RESTART", textX, textY2);
   text("EXIT", textX, textY3);
   fill(white);
   //
+  if ( image1 == true ) image(tile1, ptX6, ptY6, rectWidth, rectHeight);
+  //
+  if ( image2 == true ) image(tile2, ptX9, ptY9, rectWidth, rectHeight);
+  //
   if ( image3a == true ) image(tile3a, ptX8, ptY8, rectWidth, rectHeight);
+  //
+  if ( image3b == true ) image(tile3b, ptX8, ptY8, rectWidth, rectHeight);
+  //
+  if ( image4 == true ) image(tile4, ptX7, ptY7, rectWidth, rectHeight);
+  //
+  if ( image5 == true ) image(tile5, ptX4, ptY4, rectWidth, rectHeight);
+  //
+  if ( image6 == true ) image(tile6, ptX1, ptY1, rectWidth, rectHeight);
+  //
+  if ( image7 == true ) image(tile7, ptX2, ptY2, rectWidth, rectHeight);
+  //
+  fill(black);
+  textFont(createFont("Jomolhari", 100));
+  textAlign(LEFT, TOP);
+  if ( text8 == true ) text("THE END", ptX3, ptY3);
+  fill(white);
   //
   } //End draw
 
 void mousePressed() {
   if ( mouseX >= buttonX  && mouseY >= buttonY3 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY3+buttonHeight ) exit();
   //
-  if ( mouseX >= buttonX  && mouseY >= buttonY1 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY1+buttonHeight ) image(tile1, ptX6, ptY6, rectWidth, rectHeight);
+  if ( mouseX >= buttonX  && mouseY >= buttonY1 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY1+buttonHeight ) image1 = true;
   //
-  if ( mouseX >= ptX6  && mouseY >= ptY6 && mouseX <= ptX6+rectWidth && mouseY <= ptY6+rectWidth ) image(tile2, ptX9, ptY9, rectWidth, rectHeight);
+  if ( mouseX >= ptX6  && mouseY >= ptY6 && mouseX <= ptX6+rectWidth && mouseY <= ptY6+rectHeight ) {
+    if ( image1 == true ) image2 = true;
+  }
   //
-  if ( mouseX >= ptX9  && mouseY >= ptY9 && mouseX <= ptX9+rectWidth && mouseY <= ptY9+rectWidth ) image(tile3a, ptX8, ptY8, rectWidth, rectHeight);
+  if ( mouseX >= ptX9  && mouseY >= ptY9 && mouseX <= ptX9+rectWidth && mouseY <= ptY9+rectHeight ) {
+    if ( image2 == true ) image3a = true;
+  }
   //
-  if ( mouseX >= ptX8  && mouseY >= ptY8 && mouseX <= ptX8+rectWidth && mouseY <= ptY8+rectWidth ) {
-      if (image3a == true) {
-        image(tile3b, ptX8, ptY8, rectWidth, rectHeight);
-      }
+  if ( mouseX >= ptX8  && mouseY >= ptY8 && mouseX <= ptX8+rectWidth && mouseY <= ptY8+rectHeight ) {
+    if ( image3a == true ) image3b = true;
+  }
+  //
+  if ( mouseX >= ptX8  && mouseY >= ptY8 && mouseX <= ptX8+rectWidth && mouseY <= ptY8+rectHeight ) {
+    if ( image3a == true ) image4 = true;
+  }
+  //
+  if ( mouseX >= ptX7  && mouseY >= ptY7 && mouseX <= ptX7+rectWidth && mouseY <= ptY7+rectHeight ) {
+    if ( image4 == true ) image5 = true;
+  }
+  //
+  if ( mouseX >= ptX4  && mouseY >= ptY4 && mouseX <= ptX4+rectWidth && mouseY <= ptY4+rectHeight ) {
+    if ( image5 == true ) image6 = true;
+  }
+  //
+  if ( mouseX >= ptX1  && mouseY >= ptY1 && mouseX <= ptX1+rectWidth && mouseY <= ptY1+rectHeight ) {
+    if ( image6 == true ) image7 = true;
+  }
+  //
+  if ( mouseX >= ptX2  && mouseY >= ptY2 && mouseX <= ptX2+rectWidth && mouseY <= ptY2+rectHeight ) {
+    if ( image7 == true ) text8 = true;
   }
   //
   } //End mousePressed

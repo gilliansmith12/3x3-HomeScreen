@@ -29,9 +29,8 @@ void assign() {
   tile2 = loadImage("Tile 2.png");
   tile3a = loadImage("Tile 3a.png");
   tile3b = loadImage("Tile 3b.png");
-  // tile4 = loadImage("Tile 4.png");
-  // tile5 = loadImage("Tile 5.png");
-  // tile6 = loadImage("Tile 6.png");
-  // tile7 = loadImage("Tile 7.png");
-  // tile8 = loadImage("Tile 8.png");
+  tile4 = loadImage("Tile 4.png");
+  tile5 = loadImage("Tile 5.png");
+  tile6 = loadImage("Tile 6.png");
+  tile7 = loadImage("Tile 7.png");
 }
