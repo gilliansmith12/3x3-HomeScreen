@@ -10,7 +10,7 @@ float buttonY1, buttonY2, buttonY3;
 float textX, textWidth, textHeight;
 float textY1, textY2, textY3;
 PImage tile1, tile2, tile3a, tile3b, tile4, tile5, tile6, tile7, tile8;
-Boolean image1 = false, image2 = false, image3a = false, image3b = false, image4 = false, image5 = false, image6 = false, image7 = false, text8 = false;
+Boolean image1 = false, image2 = false, image3a = false, image3b = false, image4 = false, image5 = false, image6 = false, image7 = false, text8 = false, restart = false;
 
 void setup() {
   //Geometry
@@ -100,6 +100,8 @@ void draw() {
   if ( text8 == true ) text("THE END", ptX3, ptY3);
   fill(white);
   //
+  if ( restart == true ) restart();
+    //
   } //End draw
 
 void mousePressed() {
@@ -137,6 +139,10 @@ void mousePressed() {
   //
   if ( mouseX >= ptX2  && mouseY >= ptY2 && mouseX <= ptX2+rectWidth && mouseY <= ptY2+rectHeight ) {
     if ( image7 == true ) text8 = true;
+  }
+  //
+  if ( mouseX >= buttonX  && mouseY >= buttonY2 && mouseX <= buttonX+buttonWidth && mouseY <= buttonY2+buttonHeight ) {
+    if ( image1 == true ) restart = true;
   }
   //
   } //End mousePressed
