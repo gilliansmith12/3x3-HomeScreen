@@ -101,7 +101,7 @@ void draw() {
   fill(white);
   //
   if ( restart == true ) restart();
-    //
+  //
   } //End draw
 
 void mousePressed() {
